@@ -1,0 +1,4 @@
+secrets.h
+secrets.py
+__pycache__/
+*.env

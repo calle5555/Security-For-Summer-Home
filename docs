@@ -1,0 +1,72 @@
+arduino ide for pico:
+https://www.tomshardware.com/how-to/program-raspberry-pi-pico-with-arduino-ide
+
+mqtt:
+https://thingsmatic.com/2016/06/24/a-self-hosted-mqtt-environment-for-internet-of-things-part-1/
+http://www.steves-internet-guide.com/mosquitto-tls/
+
+psql for python:
+https://www.psycopg.org/docs/
+https://www.psycopg.org/docs/install.html
+
+Django:
+https://www.geeksforgeeks.org/django-tutorial/
+https://www.geeksforgeeks.org/django-basics/
+https://docs.djangoproject.com/en/4.2/howto/deployment/wsgi/modwsgi/
+https://djangoadventures.com/how-to-integrate-django-with-existing-database/
+https://www.digitalocean.com/community/tutorials/build-a-to-do-application-using-django-and-react
+	https://www.django-rest-framework.org
+	https://pypi.org/project/django-cors-headers/
+	https://mui.com/x/react-date-pickers/getting-started/
+		
+
+React:
+https://canvasjs.com/docs/charts/integration/react/
+https://www.npmjs.com/package/axios
+
+https://medium.com/swlh/django-rest-framework-and-spa-session-authentication-with-docker-and-nginx-aa64871f29cd
+
+https://saasitive.com/tutorial/django-celery-redis-postgres-docker-compose/
+
+
+maybe:
+Installera Python
+
+Installera pip
+
+
+
+
+SMÅGUIDE:
+Installera python 
+
+Installera pip
+
+Installera Docker:
+https://www.cherryservers.com/blog/how-to-install-and-use-docker-compose-on-ubuntu-20-04
+	
+Installera mqtt
+
+Installera postgresql
+
+Installera NPM
+
+Installera Nodejs
+	-https://www.digitalocean.com/community/tutorials/how-to-install-node-js-on-		ubuntu-22-04
+	
+Installera Arduino IDEn
+
+Installera den behövda mjukvaran till picon
+
+Installera biblioteken som behövs för picon (Arduino IDE)
+	
+Gör databasen med SQL-kommandon nedan
+
+kör docker compose build
+
+MÅSTE HA INSTRUKTIONER FÖR ATT SÄTTA UPP LOCALHOST SAMT PÅ SERVER 
+
+SQL:
+CREATE TABLE DoorTrigger(id SERIAL PRIMARY KEY, Date TIMESTAMP);
+CREATE TABLE DHT(id SERIAL PRIMARY KEY, Date TIMESTAMP, Temp DOUBLE PRECISION, Hum DOUBLE PRECISION);
+CREATE TABLE DoorUnlocked(id SERIAL PRIMARY KEY, StartDate TIMESTAMP, EndDate TIMESTAMP);
