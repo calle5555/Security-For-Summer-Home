@@ -378,3 +378,7 @@ In order to store the data, a [Postgresql](https://www.postgresql.org/) database
 # Finalizing the design
 
 TALK ABOUT DOCKER AND NGINX AND MAYBE SOMETHING ELSE
+
+## Showcasing the design
+
+VIDEO
