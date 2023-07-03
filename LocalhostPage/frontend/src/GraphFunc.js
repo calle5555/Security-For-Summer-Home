@@ -8,7 +8,7 @@ export function GraphFunc(props){
     animationEnabled: true,
     animationDuration: 1500,
     title: {
-        text: "Graph to see shit"
+        text: "Graph to view sensordata"
     },
 
     toolTip: {
