@@ -181,7 +181,7 @@ sudo apt install code -y
 
 ## Install and setup Postgresql database
 
-In order to store the data, a [Postgresql](https://www.postgresql.org/) database is used. I chose to create my own database instead of using a ready-made one such as [InfluxDB](https://www.influxdata.com/). I decided upon this based on my previous knowledge of [SQL](https://en.wikipedia.org/wiki/SQL) and because a server at [Certit Hosting](https://www.certit.se/) will be used to host the website and also store the sensor data. The reason why I chose Postgresql as the database handler instead of others such as [Mimer](https://www.mimer.com/) or [MySQL](https://www.mysql.com/) is solely due to personal preference. This section covers the installation of the database handler and the setup of the database and user.
+This section covers the installation of the database handler and the setup of the database and user.
 
 1. The first step is to install the Postgresql packages by running the following command
 ```bash
@@ -191,7 +191,6 @@ sudo apt install postgresql postgresql-contrib
 ```bash
 sudo -u postgres psql
 ```
-
 3. Create a new database with the default role. In the program, a database named `sensordata` is used, if you want to name the database differently you are free to do so, just remember to change it in the code as well.
 ```postgresql
 CREATE DATABASE sensordata;
@@ -268,7 +267,7 @@ nvm use <version_number>
 
 ## Installing and setting up the MQTT broker
 
-For this project, I am using a self-hosted MQTT broker. I chose to use the [Mosquitto](https://mosquitto.org/) broker for this project. Because I will be running the backend part of the program on a server, I chose to use a self-hosted broker because it allows me to create a client on the server and store the data collected by the sensors directly in the database. I chose Mosquitto because it is a lightweight protocol that has libraries both for the Arduino IDE and for Python. This section will cover how to set up the MQTT broker.
+This section will cover how to set up the MQTT broker.
 
 1. Install and activate the mosquitto broker service
 ```bash
@@ -360,22 +359,22 @@ breadboard with nice figure
 
 # Platform
 
-The choice of platform for this project was clear from the beggining and the reason for this is due to having access to a dedicated server. I created a self-hosted broker and on the same machine created a client that collects the data that is sent through MQTT and store it in a local database. This client is also able to publish the stored data to the MQTT broker which forwards it to subscribing clients.
+The choice of platform for this project was clear from the beggining and the reason for this is due to having access to a dedicated server. I created a self-hosted broker and on the same machine created a client that collects the data that is sent through MQTT and store it in a local database. This client is also able to publish the stored data to the MQTT broker which forwards it to subscribing clients. I am using the [Mosquitto](https://mosquitto.org/) broker for this project and I chose Mosquitto because it is a lightweight protocol that has libraries both for the Arduino IDE and for Python.
 
 This platform is very easy to expand and is something I wanted to do during this project but ran out of time. As of this moment, the project is running on my computer which is not what I originally planned since I am not able to place the Raspberry Pi Pico and access the platform at the same time. I am going to put this code on the dedicated server and implement MQTTS so that the messages are transfer with [TLS](https://sv.wikipedia.org/wiki/Transport_Layer_Security). 
 
 # The code
 
-This section will cover how the 
+This section will cover how the code
 
-## Data acquisition
-
-sensordata
-
-## Data transportation
+# Transmitting the data
 
 mqtt setup
 
-## Visualisation
+# Presenting the data
 
-website
+In order to store the data, a [Postgresql](https://www.postgresql.org/) database is used. I chose to create my own database instead of using a ready-made one such as [InfluxDB](https://www.influxdata.com/). I decided upon this based on my previous knowledge of [SQL](https://en.wikipedia.org/wiki/SQL) and because a server at [Certit Hosting](https://www.certit.se/) will be used to host the website and also store the sensor data. The reason why I chose Postgresql as the database handler instead of others such as [Mimer](https://www.mimer.com/) or [MySQL](https://www.mysql.com/) is solely due to personal preference.
+
+# Finalizing the design
+
+TALK ABOUT DOCKER AND NGINX AND MAYBE SOMETHING ELSE
