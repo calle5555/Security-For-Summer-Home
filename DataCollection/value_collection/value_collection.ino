@@ -17,11 +17,12 @@ int        port     = 1883;
 const char topicDht[]  = "Cabin/Dht11";
 const char topicMag[]  = "Cabin/Magnet/DoorOpen";
 const char topicMagDate[] = "Cabin/Magnet/Date";  
-  
+
+bool magTrigger = false;
 const long magInterval = 10000;
 unsigned long magPrev = 0;
 
-const long dhtInterval = 30000;
+const long dhtInterval = 5000;
 unsigned long dhtPrev = 0;
 
 byte dhtData[5];
@@ -69,14 +70,17 @@ void loop() {
 
   unsigned long currentMillis = millis();
 
+  //if(magTrigger);
+
   // Door magnet trigger check. 
-  if(analogRead(magPin) < 500 && currentMillis - magPrev >= magInterval){
+  if(analogRead(magPin) < 500 && currentMillis - magPrev >= magInterval && !magTrigger){
     magPrev = currentMillis;
 
     if(checkDate()){
       mqttClient.beginMessage(topicMag);
       mqttClient.print(1);
       mqttClient.endMessage();
+      //magTrigger = true;
     }
   }
 
@@ -109,7 +113,6 @@ void loop() {
 
     lastTemp = int(dhtData[2]);
     lastHum = int(dhtData[0]);
-    
   }
 }
 
@@ -178,9 +181,8 @@ bool checkDate(){
   
   const char* date = doc[String(curYear)][String(curMonth)];
   if(!date)
-    return false;
+    return true;
 
-  Serial.println(date);
   char dayArray[5];
   sprintf(dayArray, "%d", curDay);
   if(strstr(date, dayArray) != NULL)
@@ -191,8 +193,9 @@ bool checkDate(){
 
 void onMqttMessage(int messageSize){
   char tmp[2048];
+  strcpy(jsonString, tmp);
   DynamicJsonDocument doc(2048);
   deserializeJson(doc, mqttClient);
   serializeJson(doc, tmp);
   strcpy(jsonString, tmp);
- }
+}

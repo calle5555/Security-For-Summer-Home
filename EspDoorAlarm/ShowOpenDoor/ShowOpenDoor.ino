@@ -132,6 +132,7 @@ void connectWifi() {
 }
 
 void onMqttMessage(int messageSize){
+  addNoAlarm = false;
   doorAlarm = true;
   showOption = true;
 }
