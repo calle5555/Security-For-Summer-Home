@@ -12,25 +12,25 @@ I decided upon this project because my summer home is located a couple of hours 
 
 The following table includes all the components used in this project, a brief description of each component, and the cost. The name of the component includes a hyperlink to the page where it is bought.
 
-| Component  | Description | Cost |
-| ------------- | ------------- | ------------- |
-| [Starter kit](https://www.electrokit.com/produkt/start-kit-applied-iot-at-linnaeus-university-2023/)  | Starter kit for IoT course at Linnaeus University  | 399 SEK |
-| [Rasbperry Pi Pico WH*](https://www.electrokit.com/produkt/raspberry-pi-pico-wh/)  | Microcontroller  |  |
-| [ESP32](https://hitechchain.se/iot/ttgo/esp32-wifi-och-bluetooth-module-utvecklingskort-114-tums-lcd-skarm?gclid=CjwKCAjw44mlBhAQEiwAqP3eVuI8uFM8jQ0SkkTwqAWlrtL0_nbd6GTcObtFHGdmxQUSzshVb5UaoBoCtJsQAvD_BwE)  | Microcontroller with tft display  | 275 SEK  |
-| [USB A-Micro USB*](https://www.clasohlson.com/se/USB--kabel-USB-A-till-Micro-USB-Clas-Ohlson/p/39-2043)  | Data transfer cable Raspberry Pi Pico |  |
-| [USB A-USB C](https://www.clasohlson.com/se/Kort-USB-kabel-0,3m-USB-A-till-USB-C-Clas-Ohlson/p/39-2039)  | Data transfer cable for ESP32  | 129  |
-| [Raspberry powersupply micro USB](https://www.dustinhome.se/product/5010909896/micro-usb-power-supply-white?gclid=CjwKCAjw44mlBhAQEiwAqP3eVrXVGrr2Oz6APABtZlbEDU1-okSPfWW7zhps4Rwa4llhLa8Nx2YJVhoCzIAQAvD_BwE)  | Powersupply for Raspberry Pi Pico  | 155 SEK  |
-| [Raspberry powersupply USB C](https://www.dustinhome.se/product/5011172987/power-supply-153w-51v3a-eu-usb-c-black?ssel=true&gclid=CjwKCAjw44mlBhAQEiwAqP3eVu8B7xs51u0gUIL8eGargk7CXEYNuMRn2d_lWyXU77gdcn6OJhOTdxoCMPUQAvD_BwE)  | Powersupply for ESP32  | 125  |
-| [DHT11*](https://www.electrokit.com/produkt/digital-temperatur-och-fuktsensor-dht11/)  | Temperature and humidity sensor  |  |
-| [Window Magnet Contact](https://www.electrokit.com/produkt/magnetisk-dorrkontakt-no/)  | Sensor to detect opening of door or window  | 55 SEK  |
-| [Breadboard*](https://www.electrokit.com/produkt/kopplingsdack-840-anslutningar/)  | Breadboard with 840 connectors  | 69 SEK  |
-| [Male to male jumper cables*](https://www.electrokit.com/produkt/labbsladd-40-pin-30cm-hane-hane/)  | Jumper wires to wire the breadboard  |  |
-| [Resistor*](https://www.electrokit.com/produkt/kopplingsdack-840-anslutningar/)  | Resistor to regulate voltage  |  |
-|   |   | **1207 SEK**  |
+| Component  | Image | Description | Cost |
+| ------------- | ------------- | ------------- | ------------- |
+| [Starter kit](https://www.electrokit.com/produkt/start-kit-applied-iot-at-linnaeus-university-2023/)  | ![No Imange](https://github.com/calle5555/Security-For-Summer-Home/assets/84193411/ac1fec45-1222-456c-a767-d94def8b2f1e) | Starter kit for IoT course at Linnaeus University  | 399 SEK |
+| [Rasbperry Pi Pico WH*](https://www.electrokit.com/produkt/raspberry-pi-pico-wh/) | ![Raspberry Pi Pico WH](https://github.com/calle5555/Security-For-Summer-Home/assets/84193411/263d411e-f35d-4f7c-ac6e-512daa8f0a0c) | Microcontroller  |  |
+| [ESP32](https://hitechchain.se/iot/ttgo/esp32-wifi-och-bluetooth-module-utvecklingskort-114-tums-lcd-skarm?gclid=CjwKCAjw44mlBhAQEiwAqP3eVuI8uFM8jQ0SkkTwqAWlrtL0_nbd6GTcObtFHGdmxQUSzshVb5UaoBoCtJsQAvD_BwE)  | ![ESP32](https://github.com/calle5555/Security-For-Summer-Home/assets/84193411/fcb042a4-15d6-4941-a676-385d580b3ebf) | Microcontroller with tft display  | 275 SEK  |
+| [USB A-Micro USB*](https://www.clasohlson.com/se/USB--kabel-USB-A-till-Micro-USB-Clas-Ohlson/p/39-2043) | ![Micro USB cable](https://github.com/calle5555/Security-For-Summer-Home/assets/84193411/d02ab022-4450-4d88-9069-248ab195cb02) | Data transfer cable Raspberry Pi Pico |  |
+| [USB A-USB C](https://www.clasohlson.com/se/Kort-USB-kabel-0,3m-USB-A-till-USB-C-Clas-Ohlson/p/39-2039) | ![USB C cable](https://github.com/calle5555/Security-For-Summer-Home/assets/84193411/9b5ae630-986b-4d22-ad0d-bc9624fb11ca) | Data transfer cable for ESP32  | 129 SEK |
+| [Raspberry power supply micro USB](https://www.dustinhome.se/product/5010909896/micro-usb-power-supply-white?gclid=CjwKCAjw44mlBhAQEiwAqP3eVrXVGrr2Oz6APABtZlbEDU1-okSPfWW7zhps4Rwa4llhLa8Nx2YJVhoCzIAQAvD_BwE) | ![Power supply for pico](https://github.com/calle5555/Security-For-Summer-Home/assets/84193411/9c2f7bac-902d-4c3f-b5c6-c613e765bc17) | Power supply for Raspberry Pi Pico  | 155 SEK  |
+| [Raspberry power supply USB C](https://www.dustinhome.se/product/5011172987/power-supply-153w-51v3a-eu-usb-c-black?ssel=true&gclid=CjwKCAjw44mlBhAQEiwAqP3eVu8B7xs51u0gUIL8eGargk7CXEYNuMRn2d_lWyXU77gdcn6OJhOTdxoCMPUQAvD_BwE) | ![Power supply ESP32](https://github.com/calle5555/Security-For-Summer-Home/assets/84193411/d841b6a3-711c-4b5c-9037-ce873b8a2c51) | Powersupply for ESP32  | 125 SEK |
+| [DHT11*](https://www.electrokit.com/produkt/digital-temperatur-och-fuktsensor-dht11/) | ![DHT 11](https://github.com/calle5555/Security-For-Summer-Home/assets/84193411/8f1c6230-3b64-4955-a37d-d08f2089eb57) | Temperature and humidity sensor  |  |
+| [Window Magnet Contact](https://www.electrokit.com/produkt/magnetisk-dorrkontakt-no/) | ![Magnet sensor](https://github.com/calle5555/Security-For-Summer-Home/assets/84193411/ec94c5ea-0a32-4425-baee-3dfe7aaa2795) | Sensor to detect opening of door or window  | 55 SEK  |
+| [Breadboard*](https://www.electrokit.com/produkt/kopplingsdack-840-anslutningar/) | ![Breadboard](https://github.com/calle5555/Security-For-Summer-Home/assets/84193411/fe1f82b6-4591-4efc-8279-c6d9702492f7) | Breadboard with 840 connectors  |  |
+| [Male to male jumper cables*](https://www.electrokit.com/produkt/labbsladd-40-pin-30cm-hane-hane/) | ![Jumper cables](https://github.com/calle5555/Security-For-Summer-Home/assets/84193411/e40a6134-6197-4686-99ad-6ea4124b1a07) | Jumper wires to wire the breadboard  |  |
+| [330Ω Resistor*](https://www.electrokit.com/produkt/motstand-kolfilm-0-25w-330ohm-330r/) | ![Resistor](https://github.com/calle5555/Security-For-Summer-Home/assets/84193411/eac7213d-fba0-47f2-bb07-699f35f94f1a) | Resistor to regulate voltage  |  |
+|   |  |   | **1138 SEK**  |
 
-> **NOTE:** Objects marked with * are included in the starterkit and therefor have no unit price on it
+> **NOTE:** Objects marked with * are included in the starter kit and therefore have no unit price on it
 
-The reason why I used an ESP32 with a TFT display in order to visualize the data is because I had one at home since before. A cheaper choice for this would be another Raspberry Pi Pico W and attach colored LEDs and have them blinking when the alarm is triggered. The code does need to change for this which is not included in the repository.
+The reason why I used an ESP32 with a TFT display in order to visualize the data is because I had one at home before. A cheaper choice for this would be another Raspberry Pi Pico W and attach colored LEDs and have them blinking when the alarm is triggered. The code does need to change for this which is not included in the repository.
 
 # Computer setup
 
@@ -153,7 +153,7 @@ ArduinoMqttClient
 
 ## Visual Studio Code
 
-To develop the website and also the server-side mqtt client, I used [visual studio code](https://code.visualstudio.com/). I used this IDE because it is plug-and-play, easy to use and it is easy to structure and keep track of the files and folders. It is also convenient that the IDE comes with many extensions that offer great quality-of-life services. The following steps describe how to download the IDE and also the plugins that I used.
+To develop the website and also the server-side MQTT client, I used [visual studio code](https://code.visualstudio.com/). I used this IDE because it is plug-and-play, easy to use and it is easy to structure and keep track of the files and folders. It is also convenient that the IDE comes with many extensions that offer great quality-of-life services. The following steps describe how to download the IDE and also the plugins that I used.
 
 1. Download dependencies
 ```bash
@@ -239,7 +239,7 @@ sudo apt install build-essential libpq-dev python3-dev
 ```
 3. After the prerequisites are downloaded, the libraries can be installed with the following command
 ```bash
-pip install django djangorestframework django-cors-headers tzdata psycopg2
+pip install django djangorestframework django-cors-headers tzdata psycopg2 paho-mqtt
 ```
 
 ## Install NPM and NodeJS
@@ -316,6 +316,7 @@ cd Security-For-Summer-Home
        ```python
        #define SSID "<wifi SSID>"
        #define password "<wifi password>"
+       #define BROKER "<IP to MQTT broker>"
        ```
    7. Save and close file
 
@@ -327,6 +328,7 @@ cd Security-For-Summer-Home
        ```c
        #define SSID "<wifi SSID>"
        #define password "<wifi password>"
+       #define BROKER "<IP to MQTT broker>"
        ```
    10. Save and close file
 
@@ -352,16 +354,109 @@ cd Security-For-Summer-Home
            }
        }
        ```
+6. This section will show how to download the npm packages used to build the front end
+    1. Use the `cd` command to go into the folder `Security-For-Summer-Home/LocalHostPage/frontend`
+  
+    2. Run the following command
+       ```bash
+       npm install
+       ```
+
+## Running the code
+
+This section will showcase how to run the different parts of the program to be able to collect sensor data, visualize the data on the website, and also be able to see when the alarm is triggered. This section only covers the software and assumes that the hardware is set up as shown in the next section.
+
+1. Starting the server MQTT client
+
+    1. Open a new terminal window
+  
+    2. Use the `cd` command to get to the folder `Security-For-Summer-Home/MqttClient`
+  
+    3. Run the following command
+       ```bash
+       python3 mqtt_client.py
+       ```
+2. Start the backend of the website
+   
+    1. Open a new terminal window
+  
+    2. Use the `cd` command to get to the folder `Security-For-Summer-Home/LocalhostPage/WebPage`
+  
+    3. Run the following command
+       ```bash
+       python3 manage.py runserver
+       ```
+4. Start the frontend of the website
+  
+    1. Open a new terminal window
+  
+    2. Use the `cd` command to get to the folder `Security-For-Summer-Home/LocalhostPage/frontend`
+  
+    3. Run the following command
+       ```bash
+       npm run start
+       ```
+    4. A web page should open automatically
+       
+6. Flash the code to the Raspberry Pi Pico WH
+    1. Open the file `Security-For-Summer-Home/DataCollection/value_collection/value_collection.ino`
+  
+    2. Connect the microcontroller to the computer
+  
+    3. Ensure that you have selected the correct port in the Arduino IDE
+
+    4. Use the upload button to upload the code to the board
+  
+    5. Unplug the microcontroller from the computer
+  
+    6. Use the power supply to plug the controller into a wall outlet
+  
+7. Flash the code to the ESP32
+    1. Open the file `Security-For-Summer-Home/EspDoorAlarm/ShowOpenDoor/ShowOpenDoor.ino`
+  
+    2. Connect the microcontroller to the computer
+  
+    3. Ensure that you have selected the correct port in the Arduino IDE
+
+    4. Use the upload button to upload the code to the board
+  
+    5. Unplug the microcontroller from the computer
+  
+    6. Use the power supply to plug the controller into a wall outlet
 
 # Hardware setup
 
-breadboard with nice figure
+This section will cover the wiring of the sensors via a circuit diagram and the electrical calculations for both microcontrollers and sensors.
+
+## Circuit diagram
+The picture below illustrates the circuit diagram for the Raspberry Pi Pico W. The ESP32 has no sensors connected to it so no diagram has been designed for it.
+
+![hardwareSetup png](https://github.com/calle5555/Security-For-Summer-Home/assets/84193411/3c3b8efb-e9b0-4f12-9ab8-581718fefaa0)
+
+This is a very simple and straightforward sketch since there are only two sensors connected to the microcontroller. The DHT in the diagram does, however, have the pins in a different order than the one used for the project. The pin order that is on the DHT used for this project is linked [here](https://www.electrokit.com/uploads/productfile/41015/DHT11.pdf). The door sensor has one pin in the power supply running along the breadboard. The other pin is connected to a 330Ω resistor which is connected to the ground, this pin is also connected to the data pin. The reason for connecting the pin to both the data pin and ground is to ensure proper data reading by creating a [pull-down](https://www.electronics-tutorials.ws/logic/pull-up-resistor.html) resistor. 
+
+## Electrical calculations
+
+This electrical calculation will be of the entire system, meaning, both microcontrollers and all sensors.
+
+| Component  | Active | Standby
+| ------------- | ------------- | ------------- |
+| ESP 32 | 100mA |  |
+| Raspberry Pi Pico WH | 60mA  |  |
+| DHT 11 | 0.5mA - 2.5mA | 100uA-150uA |
+| Magnetic Door Switch | - | - |
+
+These following calculations are made under the assumption that the microcontrollers are running at all times and that the DHT 11 is running for 3 seconds every 10 minutes and is using the maximum current. 
+
+$$ {{(100 + 60) \times 600 + 2.5 \times 3 + 0.15 + 597} \over 600} = 160.2$$ 
+
+This means that the circuit is using approximately 160.2mA when active. Since I will not be using a battery, I will not calculate how long the circuit can operate using a battery.
 
 # Platform
 
-The choice of platform for this project was clear from the beggining and the reason for this is due to having access to a dedicated server. I created a self-hosted broker and on the same machine created a client that collects the data that is sent through MQTT and store it in a local database. This client is also able to publish the stored data to the MQTT broker which forwards it to subscribing clients. I am using the [Mosquitto](https://mosquitto.org/) broker for this project and I chose Mosquitto because it is a lightweight protocol that has libraries both for the Arduino IDE and for Python.
+The choice of platform for this project was clear from the beginning and the reason for this is due to having access to a dedicated server. I created a self-hosted broker and on the same machine created a client that collects the data that is sent through MQTT and stores it in a local database. This client is also able to publish the stored data to the MQTT broker which forwards it to subscribing clients. I am using the [Mosquitto](https://mosquitto.org/) broker for this project and I chose Mosquitto because it is lightweight and has libraries both for the Arduino IDE and for Python.
 
-This platform is very easy to expand and is something I wanted to do during this project but ran out of time. As of this moment, the project is running on my computer which is not what I originally planned since I am not able to place the Raspberry Pi Pico and access the platform at the same time. I am going to put this code on the dedicated server and implement MQTTS so that the messages are transfer with [TLS](https://sv.wikipedia.org/wiki/Transport_Layer_Security). 
+This platform is very easy to expand and is something I wanted to do during this project but ran out of time. As of this moment, the project is running on my computer which is not what I originally planned since I am not able to place the Raspberry Pi Pico and access the platform at the same time. I am going to put this code on the dedicated server and implement MQTTS so that the messages are transferred with [TLS](https://sv.wikipedia.org/wiki/Transport_Layer_Security). 
 
 # The code
 
@@ -369,16 +464,146 @@ This section will cover how the code
 
 # Transmitting the data
 
-mqtt setup
+I have used wifi as a network protocol to transfer the data. Since there is wifi both at my home and in my summer cabin, there is no need for LoRa to transmit data. MQTT is used as a transport protocol since it is easy to set up and also very lightweight. Since the broker is running locally on my computer, I did not need to make any changes to the config file for it to function. The microcontrollers are not sleeping at any point and that is because they are connected to power supplies which, in turn, are connected to wall outlets. The wifi range is also a non-issue since the microcontrollers are stationary at all times leading to them always having a network to connect to.
+
+The temperature and humidity sensor is reading values every 10 minutes and transmits them via MQTT. The code below shows the sensor data being packeted into a JSON document and then published via the MQTT client.
+```cpp
+mqttClient.beginMessage(topicDht);
+StaticJsonDocument<256> doc;
+doc["Hum"]["int"] = int(dhtData[0]);
+doc["Hum"]["dec"] = int(dhtData[1]);
+doc["Temp"]["int"] = int(dhtData[2]);
+doc["Temp"]["dec"] = int(dhtData[3]);
+serializeJson(doc, mqttClient);
+mqttClient.endMessage();
+```
+The sensor data is then routed by the broker to clients subscribing to the topic, which is only the server MQTT client running on my computer. I chose to use the JSON format because it is simple to both use and understand. Python dictionaries are much like JSON documents which leads to great compatibility and a simple way of parsing the incoming message for the server client that stores the data in the database.
+
+The data from the window contact magnet is not published at a set interval, it is published when the two contacts are separated. The value published to the broker is only the number 1 since it only acts as a trigger, the exact value is not interesting. The code below shows how the values are published.
+```cpp
+mqttClient.beginMessage(topicMag);
+mqttClient.print(1);
+mqttClient.endMessage();
+```
+The Pico is not the only client that is publishing data. Both the ESP32 and the server client are publishing values as well. The ESP32 is publishing a value when the option of *No more alarms today* has been chosen and the server client publishes the dates that the alarm should not be triggered even if the door is opened. The dates are published every time the server client receives sensor data which is not optimal but the only semi-good idea that I could come up with. The reason why the dates are published that frequently is because updates to the dates needing to reach the Pico as soon as possible to not have an unwanted alarm triggered. The code for this looks much like the code for the other messages so they are not included here.
 
 # Presenting the data
 
-In order to store the data, a [Postgresql](https://www.postgresql.org/) database is used. I chose to create my own database instead of using a ready-made one such as [InfluxDB](https://www.influxdata.com/). I decided upon this based on my previous knowledge of [SQL](https://en.wikipedia.org/wiki/SQL) and because a server at [Certit Hosting](https://www.certit.se/) will be used to host the website and also store the sensor data. The reason why I chose Postgresql as the database handler instead of others such as [Mimer](https://www.mimer.com/) or [MySQL](https://www.mysql.com/) is solely due to personal preference.
+This section covers the different ways data is being visualized. The first section will be brief about the choice of database, the second section will cover the website used to display the data gathered from the DHT11 sensor and the third section will cover the visual alarm created on the ESP32.
+
+## Choice of database
+
+In order to store the data, a [Postgresql](https://www.postgresql.org/) database is used. I chose to create my own database instead of using a ready-made one such as [InfluxDB](https://www.influxdata.com/). I decided upon this based on my previous knowledge of [SQL](https://en.wikipedia.org/wiki/SQL) and because a server at [Certit Hosting](https://www.certit.se/) will be used to host the website and also store the sensor data so I will be able to store a large amount of data. The reason why I chose Postgresql as the database handler instead of others such as [Mimer](https://www.mimer.com/) or [MySQL](https://www.mysql.com/) is solely due to personal preference. 
+
+The data is stored in the database the moment they are picked up by the server MQTT client. The following code shows the DHT11 values being stored.
+```python
+def logDHTValues(self, values):
+        self.cur.execute("INSERT INTO DHT (date, temp, hum) VALUES (%s, %s, %s);", \
+                        (dt.now(), values['temp'], values['hum']))
+        self.conn.commit()
+```
+Here, the `conn` variable holds the connection to the database while the `cur` variable is the [database cursor](https://en.wikipedia.org/wiki/Cursor_(databases)). The database also has a table for dates that the alarm has been triggered and a table that keeps track of dates when the alarm is not to be triggered if the door is opened.
+
+## Display of temperature and humidity
+![Web page](https://github.com/calle5555/Security-For-Summer-Home/assets/84193411/e7daae49-eba5-43e1-91f9-b85237e53518)
+
+The previous image shows what the web page looks like. As you can see, there are a few spikes in the data and that is due to the DHT11 sensor. I build this website using a [django](https://www.djangoproject.com/) backend and a [react](https://react.dev/) frontend. To communicate between the frontend and the backend, I use the [django rest framework](https://www.django-rest-framework.org/) to create the backend part of the api and [axios](https://axios-http.com/docs/intro) to create the frontend part. The code for this is included in quite a few files and it is located [here](https://github.com/calle5555/Security-For-Summer-Home/tree/main/LocalhostPage). The graph is created using a line chart from [CanvasJS](https://canvasjs.com/react-charts/).
+
+The following code shows how the backend part of the API is created. The following lines are contained in different files but I place them in the same block for ease of reading.
+```python
+router = routers.DefaultRouter()
+router.register(r'dhts', views.DhtView, 'dht')
+
+urlpatterns = [
+    path('api/', include(router.urls)),
+]
+
+from .models import Dht
+
+class DhtView(viewsets.ModelViewSet):
+    serializer_class = DhtSerializer
+    queryset = Dht.objects.all()
+```
+Here we can see that a `router` object is created that registers the path `dhts` and attach the data from the `DhtView` in the `urlpatterns` variable, the routers url is then attached to `api/` which makes the full api path `api/dhts`. The `DhtView` is calling a serializer class that decides which fields from the database table are supposed to be included in the API data. A `queryset` is then created containing all objects in the `Dht` database table.
+
+```js
+const getAllData = (lower, upper) => {
+    axios.get("/api/dhts/")
+        .then((res) => {
+          const d = formatData(res.data, lower, upper)
+          getData(d);
+        })
+        .catch((err) => console.log(err));
+  }
+```
+Here, a function called `getAllData` is created which includes the frontend API call using `axios`. The API url in this call is `/api/dhts/` and this matches the url created in the backend. The resulting data from the API call is then forwarded to the function `formatData` which has been discussed previously. This function is called when the page is loaded by the `useEffect` hook provided in React.
+```js
+useEffect(() => {
+    getAllData(undefined, undefined);
+  }, []);
+```
+The call to `getAllData` is with both the `lower` and `upper` values set to `undefined` meaning that all data points should be visualized. The [date pickers](https://mui.com/x/react-date-pickers/date-picker/) shown below are used to set the start and end date for which data points should be visualized.
+
+![Date pickers](https://github.com/calle5555/Security-For-Summer-Home/assets/84193411/d2c3100f-aed8-42d0-8ffe-e3d6be22da3a)
+
+A function, `handleChanges`, is called when either the start or end date picker window is exited. 
+```js
+function handleChanges(e){
+    if(startDate.$d.getTime() === oldStart.$d.getTime() && endDate.$d.getTime() === oldEnd.$d.getTime()){
+      return
+    }
+    
+    setOldStart(startDate);
+    setOldEnd(endDate);
+
+    getAllData(startDate.$d.getTime(), endDate.$d.getTime());
+}
+```
+The function checks if the date in the pickers has changed and if they have, the `getAllData` function is called with the lower bound being the [epoch](https://en.wikipedia.org/wiki/Unix_time) time of the start date picker and the upper bound is the epoch time for the end date picker. This way, the graph is updated with new data points. This also triggers the API call which will make sure that the most recent sensor readings are visualized, if they are in the time window specified, that is.
+
+The picture below shows the date pickers in action.
+
+![Date pickers in action](https://github.com/calle5555/Security-For-Summer-Home/assets/84193411/09b00dc4-b66c-4855-9568-5bda7335f72c)
+
+I have also implemented tooltips that show temperature, humidity, and the date and time when the measurement was taken.
+```js
+toolTip: {
+        shared: true,
+        contentFormatter: function(e){
+            var content = " ";
+            for (var i = 0; i < e.entries.length; i++) {
+                content += e.entries[i].dataSeries.name 
+                        + " " + "<strong>" 
+                        + e.entries[i].dataPoint.y + "</strong>";
+                content += "<br/>";
+            }
+            content += e.entries[0].dataPoint.x + "<br/>";
+            return content
+        }
+},
+```
+This code creates a shared tooltip between the two measurements, this means that both "dots" will be highlighted when I hover over one of them. I then create the tooltip by adding one row for temperature, one row for humidity, and one row for the date. The tooltip is illustrated in the picture below.
+
+![Tooltip in action](https://github.com/calle5555/Security-For-Summer-Home/assets/84193411/862a97db-d6c9-4274-a02b-056e11e85e6c)
+
+## Alarm display
+
+The ESP32 is being used to notify when an alarm has been triggered. It is connected as an MQTT client and subscribes to the topic used for alarm triggers. I will only provide pictures of the states, the code can be found [here](https://github.com/calle5555/Security-For-Summer-Home/blob/main/EspDoorAlarm/ShowOpenDoor/ShowOpenDoor.ino). There are four states of the microcontroller, the default state is that the display is black and static.![Default display](https://github.com/calle5555/Security-For-Summer-Home/assets/84193411/87cf389e-e792-4b68-81b7-25b6244b6915)
+
+The second state is that the alarm has been triggered and the display is flashing red and yellow with a warning prompt. ![Red display](https://github.com/calle5555/Security-For-Summer-Home/assets/84193411/00249791-59c2-4ac4-a26c-9961f46b14bf) ![Yellow display](https://github.com/calle5555/Security-For-Summer-Home/assets/84193411/d709d953-0e09-43ae-b375-c2def6a44759)
+
+The third state is that the alarm has been disabled and an option to remove triggers for that day is shown. ![Alarm disabled](https://github.com/calle5555/Security-For-Summer-Home/assets/84193411/5d0b9c34-0962-4046-9685-346a08f63f70)
+
+The fourth and final state is that the alarm has been disabled for the day. ![No more alarms today](https://github.com/calle5555/Security-For-Summer-Home/assets/84193411/416c0b1e-f19d-4f16-b608-caef614ccaef)
+
+The display will return to the default state if the user disables the alarm and another button is not pressed for 10 seconds.  
 
 # Finalizing the design
 
-TALK ABOUT DOCKER AND NGINX AND MAYBE SOMETHING ELSE
+![Final design](https://github.com/calle5555/Security-For-Summer-Home/assets/84193411/8df16b39-83a3-4fc0-a3d7-43e1830eeac7)
+
+The image above shows the entire hardware setup for the project. This project works very well on a local level, the DHT11 collects data that is then stored in a database for the website to visualize it. The door alarm triggers when it is supposed to and accounts for the dates when it is not supposed to sound the alarm. I am very happy with the functionality of it all but I was not able to deploy the website on time. I spent a lot of time trying to place the front- and backend into Docker containers and use Nginx to deploy the website but I could not get the API to collect the data from the backend. This will be something that I continue working on to get it up and running. I will also have the dedicated server act as the MQTT broker and implement TLS both for MQTT as well as for the website. If I redid the project from scratch, I would have begun by using Docker containers for the different aspects of the server to simplify the transition from localhost to using a domain and actually deploying the website.
 
 ## Showcasing the design
 
-VIDEO
+[This](https://www.youtube.com/watch?v=qPqxxI4oH2U) is a video showcasing the full project.
