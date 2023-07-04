@@ -19,7 +19,7 @@ const char topicMagDate[] = "Cabin/Magnet/Date";
 const long magInterval = 10000;
 unsigned long magPrev = 0;
 
-const long dhtInterval = 5000;
+const long dhtInterval = 600000;
 unsigned long dhtPrev = 0;
 
 byte dhtData[5];
