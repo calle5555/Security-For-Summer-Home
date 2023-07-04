@@ -34,7 +34,7 @@ The reason why I used an ESP32 with a TFT display in order to visualize the data
 
 # Computer setup
 
-This section will cover the steps needed to properly install and configure the software. I will provide steps specifically for the Linux distribution Ubuntu.
+This section will cover the steps needed to properly install, configure and run the software. I will provide steps specifically for the Linux distribution Ubuntu.
 
 ## Install and setup Arduino IDE
 
@@ -51,15 +51,15 @@ In this section, the Arduino IDE will be installed and the necessary configurati
 5. Click on the linked folder that ends with a `.txt` located at the bottom of the window, this is shown in the picture below
 ![Url to additional boards manager](https://github.com/calle5555/Portfolio/assets/84193411/d3d2bc18-696a-42a9-9c8b-5e6dc0f4d170)
 
-7. Close the Arduino IDE
+6. Close the Arduino IDE
 
-8. Open the file `preferences.txt` and find the line ´boardsmanager.additional.urls=´
+7. Open the file `preferences.txt` and find the line ´boardsmanager.additional.urls=´
 
-9. Add these two links after the `=` with commas in between:
+8. Add these two links after the `=` with commas in between:
     - https://dl.espressif.com/dl/package_esp32_index.json
     - https://github.com/earlephilhower/arduino-pico/releases/download/global/package_rp2040_index.json
 
-10. Save and close the file
+9. Save and close the file
 
 ### Installations for Raspberry Pi Pico W
 
@@ -195,19 +195,19 @@ sudo -u postgres psql
 ```postgresql
 CREATE DATABASE sensordata;
 ```
-5. Next up is creating a new user and applying permissions so that the user can change the newly created database. Change the `<username>` and `<password>` to what you want
+4. Next up is creating a new user and applying permissions so that the user can change the newly created database. Change the `<username>` and `<password>` to what you want
 ```postgresql
 CREATE USER <username> WITH ENCRYPTED PASSWORD <password>;
 GRANT ALL PRIVILEGE ON DATABASE sensordata TO <username>;
 ```
-6. Exit the Postgresql terminal and log into the database with the newly created user
+5. Exit the Postgresql terminal and log into the database with the newly created user
 ```postgresql
 exit
 ```
 ```bash
 psql -h localhost -d sensordata -U <username>
 ```
-7. Create the tables that will be used in the project
+6. Create the tables that will be used in the project
 ```postgresql
 CREATE TABLE DoorTrigger(id SERIAL PRIMARY KEY, Date TIMESTAMP);
 CREATE TABLE DHT(id SERIAL PRIMARY KEY, Date TIMESTAMP, Temp DOUBLE PRECISION, Hum DOUBLE PRECISION);
@@ -237,7 +237,7 @@ This project is broad and includes a wide range of libraries. The following step
 ```bash
 sudo apt install build-essential libpq-dev python3-dev
 ```
-3. After the prerequisites are downloaded, the libraries can be installed with the following command
+2. After the prerequisites are downloaded, the libraries can be installed with the following command
 ```bash
 pip install django djangorestframework django-cors-headers tzdata psycopg2 paho-mqtt
 ```
@@ -306,31 +306,31 @@ cd Security-For-Summer-Home
         dbUser = "<username for database user>"
         dbPass = "<password for database user>"
         ```
-   4. Save and close file
+   3. Save and close file
 
-   5. Create the file for the Raspberry Pi Pico W wifi credentials
+   4. Create the file for the Raspberry Pi Pico W wifi credentials
         ```bash
         <editor> DataCollection/value_collection/secrets.h
         ```
-   6. Add the wifi credentials
+   5. Add the wifi credentials
        ```python
        #define SSID "<wifi SSID>"
        #define password "<wifi password>"
        #define BROKER "<IP to MQTT broker>"
        ```
-   7. Save and close file
+   6. Save and close file
 
-   8. Create the file for the ESP32 wifi credentials
+   7. Create the file for the ESP32 wifi credentials
         ```c
         touch EspDoorAlarm/ShowOpenDoor/secrets.h
         ```
-   9. Add the wifi credentials
+   8. Add the wifi credentials
        ```c
        #define SSID "<wifi SSID>"
        #define password "<wifi password>"
        #define BROKER "<IP to MQTT broker>"
        ```
-   10. Save and close file
+   9. Save and close file
 
 5. This section will show how to edit the setting file from django
     1. Open the settings file
@@ -386,7 +386,7 @@ This section will showcase how to run the different parts of the program to be a
        ```bash
        python3 manage.py runserver
        ```
-4. Start the frontend of the website
+3. Start the frontend of the website
   
     1. Open a new terminal window
   
@@ -398,7 +398,7 @@ This section will showcase how to run the different parts of the program to be a
        ```
     4. A web page should open automatically
        
-6. Flash the code to the Raspberry Pi Pico WH
+4. Flash the code to the Raspberry Pi Pico WH
     1. Open the file `Security-For-Summer-Home/DataCollection/value_collection/value_collection.ino`
   
     2. Connect the microcontroller to the computer
@@ -411,7 +411,7 @@ This section will showcase how to run the different parts of the program to be a
   
     6. Use the power supply to plug the controller into a wall outlet
   
-7. Flash the code to the ESP32
+5. Flash the code to the ESP32
     1. Open the file `Security-For-Summer-Home/EspDoorAlarm/ShowOpenDoor/ShowOpenDoor.ino`
   
     2. Connect the microcontroller to the computer
