@@ -460,7 +460,148 @@ This platform is very easy to expand and is something I wanted to do during this
 
 # The code
 
-This section will cover how the code
+This section is divided into sections based on which part of the project the code is used in. I have only included the code I find extra interesting.
+
+## Code for the Raspberry Pi Pico
+
+The parts I find interesting for the pico are the DHT data collection and the part for checking if the board should sound the alarm. 
+```cpp
+byte dhtRead()
+{
+ byte data;
+ for(int i = 0; i < 8; i++)
+ {
+ if(digitalRead(dhtPin) == LOW)
+ {
+ while(digitalRead(dhtPin) == LOW); // wait 50us;
+ delayMicroseconds(30); // Duration of high level determine whether data is 0 or 1
+ if(digitalRead(dhtPin) == HIGH)
+ data |= (1<<(7 - i)); //High in the former, low in the post;
+ while(digitalRead(dhtPin) == HIGH); //Data '1', waiting for next bit
+ }
+ }
+ return data;
+}
+
+void dhtGetData()
+{
+ digitalWrite(dhtPin, LOW); //Pull down the bus to send the start signal;
+ delay(30); //The delay is greater than 18 ms so that DHT 11 can detect the start signal;
+ digitalWrite(dhtPin, HIGH);
+ delayMicroseconds(40); //Wait for DHT11 to respond;
+ pinMode(dhtPin, INPUT);
+ while(digitalRead(dhtPin) == HIGH);
+ delayMicroseconds(80); //The DHT11 responds by pulling the bus low for 80us;
+ if(digitalRead(dhtPin) == LOW);
+ delayMicroseconds(80); //DHT11 pulled up after the bus 80us to start sending data;
+ for(int i = 0; i < 4; i++) //Receiving data, check bits are not considered;
+ dhtData[i] = dhtRead();
+ pinMode(dhtPin, OUTPUT);
+ digitalWrite(dhtPin, HIGH); //After release of bus, wait for host to start next signal
+}
+```
+There are libraries for Arduino that can be used to get the measurements, and those would most likely have achieved fewer false readings, but I decided to go this route because I find it interesting how the sensor acquires the data and the timing required to collect the data. The `dhtGetData` function "fires up" the sensor and then enters a for-loop where the data is collected in the `dhtRead` function. 
+
+The next code snippet is the code to check if an alarm should be sent.
+```cpp
+void setClock() {
+  NTP.begin("ntp.netnod.se");
+  NTP.waitSet();
+}
+
+bool checkDate(){
+  int curDay, curMonth, curYear;
+  setClock();
+  time_t now = time(nullptr);
+  struct tm timeinfo;
+  gmtime_r(&now, &timeinfo);
+  curDay = timeinfo.tm_mday;
+  curMonth = timeinfo.tm_mon+1;
+  curYear = timeinfo.tm_year+1900;
+  
+  DynamicJsonDocument doc(2048);
+  deserializeJson(doc, jsonString);
+  
+  const char* date = doc[String(curYear)][String(curMonth)];
+  if(!date)
+    return true;
+
+  char dayArray[5];
+  sprintf(dayArray, "%d", curDay);
+  if(strstr(date, dayArray) != NULL)
+    return false;
+
+  return true;
+}
+```
+The `setClock` function uses [NTP](https://sv.wikipedia.org/wiki/Network_Time_Protocol) to set an accurate time on the pico. The NTP server used is provided by [Netnod](https://www.netnod.se/). This function takes quite a bit of time so it would be quite helpful to implement a functionality so that this function is not called on every iteration of the function. The `checkDate` function starts by getting the date and time that is set on the Pico by the `setClock` function. The function then proceeds with creating a JSON object out of the `jsonString` variable. The `jsonString` variable is updated every time that the server MQTT client sends the data with the dates that are free from alarms. The structure of the JSON object is as follows.
+```json
+{
+    "<year>" : {
+                    "<month>" : "<day> <day> <day>"
+                }
+}
+```
+Where the year, month, and day are written with numbers. The function checks if the current year and current month are mentioned in the JSON file and if they are not, the function returns `true` meaning to sound the alarm. If the year and month are in the file, the function then receives the string of dates that should not trigger the alarm. The function `sprintf` converts the integer containing the current day into a char array. The `strstr` function is used to check for a substring in a char array and is used to check if the current date is in the string of dates that should not trigger the alarm.
+
+## Code for the server MQTT client
+
+The following code is used to get the dates that the alarm should not be triggered and convert them into the correct format.
+```python
+def readDoorDates(self):
+        self.cur.execute("SELECT * FROM DoorUnlocked;")
+        dbData = self.cur.fetchall()
+        data = {}
+        for tup in dbData:
+            startYear, startMonth, startDay = str(tup[1]).split(' ')[0].split('-')
+            endYear, endMonth, endDay = str(tup[2]).split(' ')[0].split('-')
+
+            startDate = date(int(startYear), int(startMonth), int(startDay))
+            endDate = date(int(endYear), int(endMonth), int(endDay))
+
+            for i in range((endDate-startDate).days + 1):
+                tmp = startDate + timedelta(days = i)
+                year = str(tmp.year)
+                month = str(tmp.month)
+                day = str(tmp.day)
+
+                if year not in data.keys():
+                    data[year] = {}
+
+                if month not in data[year].keys():
+                    data[year][month] = ""
+
+                if day not in data[year][month]:
+                    data[year][month] += day + ' '
+        return data
+```
+This function starts by fetching all of the database entries and then iterates through every entry using a for-loop. A dictionary is created to store the dates and it has the same format as the JSON file above. The dates from the database are then parsed and in order to utilize the `date + timedelta()` mechanic to get every unique day from the start until the finish, `date` objects are created. Another for-loop is used to go through every day from the start of the no-alarm period to the end of the period. 
+
+## Code for the frontend
+
+The following code is used to determine which data points should be added to the graph. This function is used when the user updates the start or end date and time in the date pickers.
+```js
+function formatData(data, lower, upper){
+  var tmp = {tempPoints: [], humPoints: []};
+
+  data.forEach(element => {
+    var date = new Date(element.date);
+    
+    if(lower !== undefined && upper !== undefined){
+      var epochTime = date.getTime();
+      
+      if(upper < epochTime || epochTime < lower){
+        return;
+      }
+    }
+
+    tmp.tempPoints.push({y: Number(element.temp), x: date})
+    tmp.humPoints.push({y: Number(element.hum), x: date})
+  });
+  return tmp;
+}
+```
+This function loops through every data point available using a `forEach` loop and utilizes the [unix time](https://en.wikipedia.org/wiki/Unix_time) in order to filter out dates and times that are outside of the lower and upper bounds. If a data point is outside of those bounds the `return` statement is used in order to skip to the next iteration of the loop. In a `forEach` loop, the `return` statement works as the `continue` statement does in Python, this is because `forEach` calls a function on every element. A list of data points that are within the bounds is then returned to the caller.
 
 # Transmitting the data
 
