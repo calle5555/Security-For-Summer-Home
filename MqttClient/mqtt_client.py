@@ -34,11 +34,13 @@ def pub_door_dates():
     data = helper.getDoorDates()
     client.publish("Cabin/Magnet/Date", payload=json.dumps(data), qos=1)
 
-helper = HelperClass()
+
 client = mqtt.Client(client_id="ServerClient")
 client.connect("localhost", 1883, 60)
 
 client.on_connect = on_connect
 client.on_message = on_message
+
+helper = HelperClass()
 
 client.loop_forever()

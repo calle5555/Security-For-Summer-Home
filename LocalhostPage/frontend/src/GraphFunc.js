@@ -17,7 +17,7 @@ export function GraphFunc(props){
             var content = " ";
             for (var i = 0; i < e.entries.length; i++) {
                 content += e.entries[i].dataSeries.name 
-                        + " " + "<strong>" 
+                        + " <strong>" 
                         + e.entries[i].dataPoint.y + "</strong>";
                 content += "<br/>";
             }

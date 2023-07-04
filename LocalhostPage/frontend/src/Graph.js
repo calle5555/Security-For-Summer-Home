@@ -64,7 +64,6 @@ export function Graph() {
     getAllData(startDate.$d.getTime(), endDate.$d.getTime());
   }
 
-
   return(
     <>
       <GraphFunc data={data} />

@@ -75,7 +75,6 @@ TEMPLATES = [
 
 WSGI_APPLICATION = 'WebPage.wsgi.application'
 
-
 # Database
 # https://docs.djangoproject.com/en/4.1/ref/settings/#databases
 with open('/etc/db_pass.txt') as f:

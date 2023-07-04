@@ -7,7 +7,7 @@
 char ssid[] = SSID;
 char pass [] = password;
 
-const char broker[] = "192.168.0.7";
+const char broker[] = BROKER;
 int        port     = 1883;
 const char topicMagDate[] = "Cabin/Magnet/DoorOpen";
 const char topicNoAlarm[] = "Home/ESP32/NoAlarm";  

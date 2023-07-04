@@ -10,15 +10,12 @@ char pass [] = password;
 WiFiClient wifiClient;
 MqttClient mqttClient(wifiClient);
 
-//mqttClient.setUsernamePassword(MQTTUser, MQTTPass);
-
-const char broker[] = "192.168.0.7";
+const char broker[] = BROKER;
 int        port     = 1883;
 const char topicDht[]  = "Cabin/Dht11";
 const char topicMag[]  = "Cabin/Magnet/DoorOpen";
 const char topicMagDate[] = "Cabin/Magnet/Date";  
 
-bool magTrigger = false;
 const long magInterval = 10000;
 unsigned long magPrev = 0;
 
@@ -70,17 +67,14 @@ void loop() {
 
   unsigned long currentMillis = millis();
 
-  //if(magTrigger);
-
   // Door magnet trigger check. 
-  if(analogRead(magPin) < 500 && currentMillis - magPrev >= magInterval && !magTrigger){
+  if(analogRead(magPin) < 500 && currentMillis - magPrev >= magInterval){
     magPrev = currentMillis;
 
     if(checkDate()){
       mqttClient.beginMessage(topicMag);
       mqttClient.print(1);
       mqttClient.endMessage();
-      //magTrigger = true;
     }
   }
 
@@ -88,17 +82,6 @@ void loop() {
     // save the last time a message was sent
     dhtPrev = currentMillis;
     dhtGetData();
-   
-    Serial.print("Current humdity = ");
-    Serial.print(dhtData[0], DEC); //Displays the integer bits of humidity;
-    Serial.print('.');
-    Serial.print(dhtData[1], DEC); //Displays the decimal places of the humidity;
-    Serial.println('%');
-    Serial.print("Current temperature = ");
-    Serial.print(dhtData[2], DEC); //Displays the integer bits of temperature;
-    Serial.print('.');
-    Serial.print(dhtData[3], DEC); //Displays the decimal places of the temperature;
-    Serial.println('C');
 
     if(abs(int(dhtData[2]) - lastTemp) < 15 && abs(int(dhtData[0]) - lastHum) < 30){
       mqttClient.beginMessage(topicDht);
